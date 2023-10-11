@@ -1,0 +1,36 @@
+.create-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.create-form {
+	width: 30vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.3rem;
+}
+
+.create-form label {
+	justify-content: center;
+}
+
+.create-form select {
+	text-align: center;
+}
+.create-form label,
+input,
+button,
+select {
+	font-size: 1.3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.errors {
+	color: red;
+}

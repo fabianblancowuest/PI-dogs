@@ -1,0 +1,53 @@
+.nav-container {
+	background: linear-gradient(
+		90deg,
+		hsla(213, 77%, 14%, 1) 0%,
+		hsla(202, 27%, 45%, 1) 100%
+	);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 2rem;
+	align-items: center;
+	height: 3.7rem;
+	z-index: 100;
+	padding: 0 2rem;
+	font-size: 0.9rem;
+}
+
+.principal-buttons {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 4rem;
+	margin-left: auto;
+}
+
+.navLink {
+	border-radius: 0.2rem;
+	color: white;
+	font-weight: bold;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	transition: background-color 0.3s;
+}
+
+.activeLink {
+	color: rgb(230, 218, 218);
+	font-weight: bolder;
+	letter-spacing: 0.2rem;
+	padding: 0.5rem 1rem;
+	color: orangered;
+	text-shadow: 0.1rem 0.1rem 1rem black;
+	border-radius: 0.5rem;
+	text-decoration: none;
+}
+
+.nav-logo img {
+	width: 4rem;
+	background-color: blue;
+}
