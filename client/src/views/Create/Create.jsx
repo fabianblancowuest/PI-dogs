@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Create.css";
 import { validate } from "./validate";
 import { useDispatch, useSelector } from "react-redux";
-import { getTemperaments, postHero } from "../../redux/actions";
+import { getTemperaments, postDog } from "../../redux/actions";
 
 const Create = () => {
 	const dispatch = useDispatch();
@@ -15,25 +15,24 @@ const Create = () => {
 
 	const initialState = {
 		name: "",
-		image: "",
+		image: "imagen.jpg",
 		height: "",
 		weight: "",
 		life_span: "15-20",
-		temperaments: [],
+		temperament: ["Curious", "Active"],
 	};
 
-	const temperamentsRef = useRef();
+	// const temperamentsRef = useRef();
 	const [dogData, setDogData] = useState(initialState);
 	const [errors, setErrors] = useState({});
 
 	const handleChange = (event) => {
 		const { name, value } = event.target;
-		if (value === "Select an option") return;
-		if (name === "temperaments") {
+		if (name === "temperament") {
 			setDogData({
 				...dogData,
-				temperaments: [
-					...dogData.temperaments,
+				temperament: [
+					...dogData.temperament,
 					// document.getElementById("temperaments").value,
 					value,
 				],
@@ -66,36 +65,18 @@ const Create = () => {
 		return disabledAux;
 	};
 
-	const removeTemperament = (index) => {
-		setDogData({
-			...dogData,
-			temperaments: dogData.temperaments.filter((_, i) => i !== index),
-		});
-	};
-
-	const handleAddTemperament = () => {
-		const value = temperamentsRef.current.value;
-		if (
-			value !== "-- Select an option --" &&
-			!dogData.temperaments.includes(value)
-		) {
-			setDogData({
-				...dogData,
-				temperaments: [...dogData.temperaments, value],
-			});
-		}
-	};
+	// const removeTemperament = (index) => {
+	// 	setDogData({
+	// 		...dogData,
+	// 		temperaments: dogData.temperaments.filter((_, i) => i !== index),
+	// 	});
+	// };
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		dispatch(postHero(dogData));
+		dispatch(postDog(dogData));
 		console.log(dogData);
 	};
-
-	console.log("esto me devuelve", disabledFunction());
-	console.log("estado dogData temperaments", dogData.temperaments);
-	console.log(dogData);
-	console.log(removeTemperament);
 
 	return (
 		<div className="create-container">
@@ -112,7 +93,7 @@ const Create = () => {
 				<input name="weight" onChange={handleChange} type="text" />
 				{errors.weight && <p className="errors">{errors.weight}</p>}
 
-				<label htmlFor="">Temperaments</label>
+				{/* <label htmlFor="">Temperaments</label>
 				<select
 					name="temperaments"
 					id="temperaments"
@@ -124,14 +105,14 @@ const Create = () => {
 							{temperament}
 						</option>
 					))}
-				</select>
-				<button
+				</select> */}
+				{/* <button
 					name="temperaments"
 					type="button"
 					onClick={handleAddTemperament}
 				>
 					Add
-				</button>
+				</button> */}
 				{/* <div>
 					{dogData.temperaments.length &&
 						dogData.temperaments.map((temperament, index) => (
@@ -140,7 +121,7 @@ const Create = () => {
 							</p>
 						))}
 				</div> */}
-				{errors.temperaments && <p>{errors.temperaments}</p>}
+				{/* {errors.temperaments && <p>{errors.temperaments}</p>} */}
 				<input type="submit" disabled={disabledFunction} value="Submit" />
 			</form>
 		</div>

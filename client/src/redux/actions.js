@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_TEMPERAMENTS } from "./actions-types";
+import { POST_DOG, GET_DOGS, GET_TEMPERAMENTS } from "./actions-types";
 
 const getTemperaments = () => {
 	return async (dispatch) => {
@@ -17,14 +17,32 @@ const getTemperaments = () => {
 	};
 };
 
-const postHero = (state) => {
+const postDog = (state) => {
 	return async (dispatch) => {
 		try {
-			await axios.post("http://localhost:3001/dogs", state);
+			// const { data } = await axios.post("http://localhost:3001/dogs/", state);
+			await axios.post("http://localhost:3001/dogs/post", state);
+
+			alert("Perro creado con éxito");
+		} catch (error) {
+			console.log(error);
+			alert(error.response.data.error);
+		}
+	};
+};
+
+const getDogs = () => {
+	return async (dispatch) => {
+		try {
+			const { data } = await axios.get("http://localhost:3001/dogs");
+			dispatch({
+				type: GET_DOGS,
+				payload: data,
+			});
 		} catch (error) {
 			console.log(error);
 		}
 	};
 };
 
-export { getTemperaments, postHero };
+export { getTemperaments, postDog, getDogs };

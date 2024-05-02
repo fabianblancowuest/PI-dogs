@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 
+// Dog Model
 module.exports = (sequelize) => {
 	sequelize.define("dog", {
 		id: {

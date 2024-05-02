@@ -1,6 +1,6 @@
 // importar las action-types
 
-import { GET_TEMPERAMENTS } from "./actions-types";
+import { POST_DOG, GET_TEMPERAMENTS, GET_DOGS } from "./actions-types";
 
 // Inicializar el initial state
 const initialState = {
@@ -17,6 +17,15 @@ const rootReducer = (state = initialState, action) => {
 			return {
 				...state,
 				allTemperaments: payload,
+			};
+		case POST_DOG:
+			return {
+				...state,
+			};
+		case GET_DOGS:
+			return {
+				...state,
+				allDogs: payload,
 			};
 		default:
 			return state;

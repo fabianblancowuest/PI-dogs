@@ -2,6 +2,7 @@ const {
 	getAllTemperamentsDB,
 } = require("../controllers/temperamentsController");
 
+// Get Temperaments
 const getTemperamentsHandler = async (req, res) => {
 	try {
 		const response = await getAllTemperamentsDB();

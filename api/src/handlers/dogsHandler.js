@@ -6,6 +6,7 @@ const {
 	getDogById,
 } = require("../controllers/dogsController");
 
+// Create Dog
 const createDogHandler = async (req, res) => {
 	try {
 		const { name, image, height, weight, life_span, temperament } = req.body;
@@ -24,6 +25,7 @@ const createDogHandler = async (req, res) => {
 	}
 };
 
+// Get Dog By Name
 const getDogHandler = async (req, res) => {
 	try {
 		let { name } = req.query;
@@ -34,6 +36,7 @@ const getDogHandler = async (req, res) => {
 	}
 };
 
+// Get Dog By Id
 const getDogByIdHandler = async (req, res) => {
 	try {
 		const { id } = req.params;
@@ -44,6 +47,7 @@ const getDogByIdHandler = async (req, res) => {
 	}
 };
 
+// Update Dog
 const putDogHandler = async (req, res) => {
 	try {
 		const { id } = req.params;
@@ -54,6 +58,7 @@ const putDogHandler = async (req, res) => {
 	}
 };
 
+// Delete Dog
 const deleteDogHandler = async (req, res) => {
 	try {
 		const { id } = req.params;

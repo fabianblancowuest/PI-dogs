@@ -12,7 +12,7 @@ const dogsRouter = Router();
 dogsRouter
 	.get("/:id", getDogByIdHandler)
 	.get("/", getDogHandler)
-	.post("/", createDogHandler)
+	.post("/post", createDogHandler)
 	.put("/:id", putDogHandler)
 	.delete("/:id", deleteDogHandler);
 
