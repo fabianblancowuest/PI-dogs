@@ -7,17 +7,14 @@ import { useEffect } from "react";
 const Cards = ({ allDogs }) => {
 	const dispatch = useDispatch();
 	const dogs = useSelector((state) => state.allDogs);
-	const temperaments = useSelector((state) => state.allTemperaments);
-	console.log("dogs\n", dogs);
-	console.log("temperaments\n", temperaments);
+	// const temperaments = useSelector((state) => state.allTemperaments);
 	const handleGetDogs = () => {
 		dispatch(getDogs());
-		console.log(dogs);
 	};
 
-	useEffect(() => {
-		console.log("Updated dogs:", dogs);
-	}, [dogs]);
+	// useEffect(() => {
+	// 	console.log("Updated dogs:", dogs);
+	// }, [dogs]);
 
 	return (
 		<div className="cards-container">
@@ -28,6 +25,7 @@ const Cards = ({ allDogs }) => {
 					name={dog.name}
 					height={dog.height}
 					weight={dog.weight}
+					image={dog.image}
 				></Card>
 			))}
 		</div>

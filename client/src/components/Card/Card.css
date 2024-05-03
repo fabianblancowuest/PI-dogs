@@ -1,6 +1,12 @@
 .card-container {
-	width: 10rem;
-	height: 18rem;
+	width: 20rem;
+	max-height: fit-content;
+	/* height: 27rem; */
 	box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
 	border-radius: 0.5rem;
+}
+
+.card-container img {
+	width: 90%;
+	border-radius: 10%;
 }
