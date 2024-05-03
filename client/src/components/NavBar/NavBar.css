@@ -5,6 +5,7 @@
 		hsla(202, 27%, 45%, 1) 100%
 	);
 	position: fixed;
+	width: 99vw;
 	top: 0;
 	left: 0;
 	display: flex;

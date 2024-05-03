@@ -1,5 +1,6 @@
 import React from "react";
 import Cards from "./../../components/Cards/Cards";
+import "./Home.css";
 
 const Home = () => {
 	const allDogs = [
@@ -8,7 +9,7 @@ const Home = () => {
 		{ name: "Coqui", height: "15-22", weight: "12-22" },
 	];
 	return (
-		<div>
+		<div className="home-container">
 			<h1>Welcome to Home</h1>
 			<Cards allDogs={allDogs}></Cards>
 		</div>

@@ -4,8 +4,10 @@ const Card = (props) => {
 	return (
 		<div className="card-container">
 			<h3>{props.name}</h3>
-			<img src={props.image.url}></img>
-			<img src={props.image}></img>
+			<img
+				src={props.image.url ? props.image.url : props.image}
+				alt="dog-picture"
+			></img>
 			<h3>
 				Weight: {props.weight.metric ? props.weight.metric : props.weight}
 			</h3>

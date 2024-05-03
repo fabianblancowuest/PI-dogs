@@ -82,6 +82,7 @@ const Create = () => {
 	return (
 		<div className="create-container">
 			<form className="create-form" onSubmit={handleSubmit}>
+				<h2>Create a Dog</h2>
 				{/* Name */}
 				<label>Name: </label>
 				<input name="name" onChange={handleChange} type="text" />
