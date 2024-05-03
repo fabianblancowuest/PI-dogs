@@ -18,16 +18,20 @@ const Cards = ({ allDogs }) => {
 
 	return (
 		<div className="cards-container">
-			<button onClick={handleGetDogs}>Get Dogs</button>
-			{dogs.map((dog, index) => (
-				<Card
-					key={index}
-					name={dog.name}
-					height={dog.height}
-					weight={dog.weight}
-					image={dog.image}
-				></Card>
-			))}
+			<div>
+				<button onClick={handleGetDogs}>Get Dogs</button>
+			</div>
+			<div className="dogs-container">
+				{dogs.map((dog, index) => (
+					<Card
+						key={index}
+						name={dog.name}
+						height={dog.height}
+						weight={dog.weight}
+						image={dog.image}
+					></Card>
+				))}
+			</div>
 		</div>
 	);
 };

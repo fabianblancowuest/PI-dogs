@@ -1,8 +1,8 @@
-import React from "react";
+import "./Detail.css";
 
 const Detail = (props) => {
 	return (
-		<div>
+		<div className="detail-container">
 			<h2>Detail component</h2>
 		</div>
 	);

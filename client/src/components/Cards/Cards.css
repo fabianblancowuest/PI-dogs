@@ -4,5 +4,19 @@
 	flex-wrap: wrap;
 	gap: 2rem;
 	justify-content: space-evenly;
+	min-height: 100vh;
+}
+
+.cards-container button {
+	width: 10rem;
+	height: 40px;
+	border-radius: 5px;
+}
+
+.dogs-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	justify-content: space-evenly;
 	align-items: center;
 }

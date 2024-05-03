@@ -1,5 +1,16 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	/* width: 98vw; */
+	width: auto;
+	box-sizing: border-box;
+	/* overflow-x: hidden; */
+}
+
 .App {
 	text-align: center;
+	background-color: rgba(246, 246, 246, 0.479);
 }
 
 .App-logo {
@@ -26,10 +37,6 @@
 
 .App-link {
 	color: #61dafb;
-}
-
-.navs {
-	margin-top: 6rem;
 }
 
 @keyframes App-logo-spin {

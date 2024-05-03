@@ -5,6 +5,7 @@ import Home from "./views/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import Detail from "./views/Detail/Detail";
 import Create from "./views/Create/Create";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 						<Route path="/create" element={<Create></Create>}></Route>
 					</Routes>
 				</BrowserRouter>
+				<Footer></Footer>
 			</div>
 		</div>
 	);

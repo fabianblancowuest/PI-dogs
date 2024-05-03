@@ -15,7 +15,7 @@ const Create = () => {
 
 	const initialState = {
 		name: "",
-		image: "imagen.jpg",
+		image: "",
 		height: "",
 		weight: "",
 		life_span: "15-20",
@@ -76,21 +76,30 @@ const Create = () => {
 		event.preventDefault();
 		dispatch(postDog(dogData));
 		console.log(dogData);
+		setDogData(initialState);
 	};
 
 	return (
 		<div className="create-container">
 			<form className="create-form" onSubmit={handleSubmit}>
-				<label htmlFor="">Name: </label>
+				{/* Name */}
+				<label>Name: </label>
 				<input name="name" onChange={handleChange} type="text" />
 				{errors.name && <p className="errors">{errors.name}</p>}
 
-				<label htmlFor="">Height</label>
+				{/* Height */}
+				<label>Height</label>
 				<input name="height" onChange={handleChange} type="text" />
 				{errors.height && <p className="errors">{errors.height}</p>}
 
-				<label htmlFor="">Weight</label>
+				{/* Weight */}
+				<label>Weight</label>
 				<input name="weight" onChange={handleChange} type="text" />
+				{errors.weight && <p className="errors">{errors.weight}</p>}
+
+				{/* Image */}
+				<label>Image</label>
+				<input name="image" onChange={handleChange} type="text"></input>
 				{errors.weight && <p className="errors">{errors.weight}</p>}
 
 				{/* <label htmlFor="">Temperaments</label>
