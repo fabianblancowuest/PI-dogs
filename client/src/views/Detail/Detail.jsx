@@ -1,7 +1,11 @@
 import React from "react";
 
-const Detail = () => {
-	return <div>Detail</div>;
+const Detail = (props) => {
+	return (
+		<div>
+			<h2>Detail component</h2>
+		</div>
+	);
 };
 
 export default Detail;
